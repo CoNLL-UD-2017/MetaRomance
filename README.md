@@ -30,7 +30,7 @@ Pay attention: do not install the package in a directory whose name contain blan
 
 ## HOW TO USE
 
-deppattern.sh  <type_of_output> <lang> <file> [parser] [grammar]
+    deppattern.sh  <type_of_output> <lang> <file> [parser] [grammar]
 
       type_of_output= -a (dependency analysis), -c (correct tagged text)
       language=gl, es, en, pt
@@ -95,9 +95,9 @@ For instance, the sentence "I am a man." generates the following output:
 ```
 SENT::<I_PRO_0_<number:0|lemma:I|possessor:0|case:0|genre:0|person:0|politeness:0|type:P|token:I|> am_VERB_1_<number:0|mode:0|lemma:be|genre:0|tense:0|person:0|type:S|token:am|> a_DT_2_<number:0|lemma:a|possessor:0|genre:0|person:0|type:0|token:a|> man_NOUN_3_<number:S|lemma:man|genre:0|person:3|type:C|token:man|> ._SENT>
 
-(Lobj;be_VERBF_1;I_PN_0)
+(Lobj;be_VERB_1;I_PN_0)
 (Spec;man_NOM_3;a_DT_2)
-(Robj;be_VERBF_1;man_NOM_3)
+(Robj;be_VERB_1;man_NOM_3)
 ```
 
 
@@ -120,7 +120,7 @@ Lin, D., 1998. Dependency-based Evaluation of MINIPAR. In Proceedings of the Wor
 
 This format was adopted by the evaluation tasks defined in CoNLL.
 
-To get this ouput format file, you have to run ./scripts/saidaCoNLL.perl taking as input the output of 'dp.sh -a'. 
+To get this ouput format file, you have to run ./scripts/saidaCoNLL.perl taking as input the output of 'deppattern.sh -a'. 
 
 
 
